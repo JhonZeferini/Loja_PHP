@@ -51,6 +51,9 @@ class ProdutoController
         //montar o objeto
         $produto = new Produto();
         $produto->setNome($nome);
+        $produto->setCategoria($categoria);
+        $produto->setPreco($preco);
+
         //instancia quem vai guardar no banco
         $produtoDAO = new ProdutoDAO();
         //grava no banco

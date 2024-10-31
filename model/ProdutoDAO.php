@@ -14,8 +14,8 @@ class ProdutoDAO
         $connection = $conexao->getConnection();
         //Statement 'Consulta'
         $stmt = $connection->prepare(
-            'INSERT INTO produto(nome, categoria, valor)
-            VALUES(:nome, :categoria, :valor) '
+            'INSERT INTO produto(nome, categoria, preco)
+            VALUES(:nome, :categoria, :preco) '
         );
         //Preencher a consulta
         $stmt->bindParam(':nome', $produto->getNome());
@@ -32,7 +32,7 @@ class ProdutoDAO
         $conexao = new Conexao();
         $connection = $conexao->getConnection();
         $stmt = $connection->prepare('UPDATE produto set nome = :nome, categoria = :categoria,
-         valor = :valor, categoria = :categoria, valor = :valor, where codigo = :codigo ');
+         preco = :preco, categoria = :categoria, preco = :preco, where codigo = :codigo ');
         $stmt->bindParam(':nome', $produto->getNome());
         $stmt->bindParam(':codigo', $produto->getCodigo());
         $stmt->execute();
