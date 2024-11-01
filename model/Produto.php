@@ -25,11 +25,11 @@ class Produto{
         $this->categoria = $categoria;
     }
 
-    public function getValor(){
-        return $this->valor;
+    public function getPreco(){
+        return $this->preco;
     }
-    public function setValor($valor){
-        $this->valor = $valor;
+    public function setPreco($preco){
+        $this->preco = $preco;
     }
 }
 
