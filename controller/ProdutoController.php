@@ -1,9 +1,9 @@
 <?php
 namespace controller;
 
-//require 'model\Produto.php';
-//require 'model\ProdutoDAO.php';
-use Produto;
+require '..\model\Produto.php';
+require '..\model\ProdutoDAO.php';
+use model\Produto;
 use model\ProdutoDAO;
 // Identifica a requisição e o parâmetro na url
 if (
@@ -47,6 +47,8 @@ class ProdutoController
     public function salvar()
     {
         $nome = filter_input(INPUT_POST, 'nome_produto');
+        $categoria = filter_input(INPUT_POST,'categoria');
+        $preco = filter_input(INPUT_POST,'preco' );
         echo $nome;
         //montar o objeto
         $produto = new Produto();

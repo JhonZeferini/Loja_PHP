@@ -1,8 +1,8 @@
 <html>
 
 <body>
-   <a href="controller/ProdutoController.php">
-      Testar Controlador
+   <?php include "view/menu.php" ?>
+   <h1>Bem Vindo</h1>
    </a>
 </body>
 
